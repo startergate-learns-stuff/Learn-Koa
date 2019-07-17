@@ -5,7 +5,17 @@
   "author": "STARTERGATE <32726809+startergate@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch src/ src/index.js",
+    "start": "node src"
   },
-  "description": ""
+  "description": "No one: <br>\r Me: Abandon Express!\r ![Abandon Ship!](https://media.giphy.com/media/3o6ZtihIv0pJqdp3H2/giphy.gif)",
+  "repository": "git+https://github.com/startergate/Learn-Koa.git",
+  "bugs": {
+    "url": "https://github.com/startergate/Learn-Koa/issues"
+  },
+  "homepage": "https://github.com/startergate/Learn-Koa#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0"
+  }
 }
