@@ -1,9 +1,9 @@
 const Router = require('koa-router');
 
-const books = require('./books');
-
 const router = new Router();
 
-router.use('/books', books.routes());
+router.get('/', (ctx, next) => {
+    ctx.body = 'GET ' + ctx.request.path;
+});
 
 module.exports = router;
