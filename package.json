@@ -1,0 +1,11 @@
+{
+  "name": "learn-koa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "STARTERGATE <32726809+startergate@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": ""
+}
