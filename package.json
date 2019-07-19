@@ -15,7 +15,9 @@
   },
   "homepage": "https://github.com/startergate/Learn-Koa#readme",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "koa": "^2.7.0",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.6.5"
   }
 }

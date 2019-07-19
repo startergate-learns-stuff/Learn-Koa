@@ -1,10 +1,25 @@
+require('dotenv').config();
+
 const Koa = require('koa');
 const Router = require('koa-router');
+const mongoose = require('mongoose');
 
 const api = require('./api');
 
 const app = new Koa();
 const router = new Router();
+
+mongoose.Promise = global.Promise;
+
+mongoose.connect(process.env.MONGO_URI, {
+    useMongoClient: true
+}).then(res => {
+    console.log('success');
+}).catch(e => {
+    console.log(e);
+});
+
+const port = process.env.PORT || 4000;
 
 router.use('/api', api.routes());
 
@@ -33,6 +48,6 @@ router.get('/post', (ctx, next) => {
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.listen(4000, () => {
-    console.log(4000)
+app.listen(port, () => {
+    console.log(port)
 });
