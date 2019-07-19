@@ -11,9 +11,7 @@ const router = new Router();
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGO_URI, {
-    useMongoClient: true
-}).then(res => {
+mongoose.connect(process.env.MONGO_URI).then(res => {
     console.log('success');
 }).catch(e => {
     console.log(e);
