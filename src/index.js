@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const Koa = require('koa');
 const Router = require('koa-router');
+const bodyParser = require('koa-bodyparser');
 const mongoose = require('mongoose');
 
 const api = require('./api');
@@ -18,6 +19,8 @@ mongoose.connect(process.env.MONGO_URI).then(res => {
 });
 
 const port = process.env.PORT || 4000;
+
+app.use(bodyParser());
 
 router.use('/api', api.routes());
 

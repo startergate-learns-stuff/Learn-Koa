@@ -17,3 +17,5 @@ const Book = new Schema({
         default: Date.now
     }
 });
+
+module.exports = mongoose.model('Book', Book);

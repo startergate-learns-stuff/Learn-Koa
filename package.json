@@ -5,8 +5,8 @@
   "author": "STARTERGATE <32726809+startergate@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --watch src/ src/index.js",
-    "start": "node src"
+    "dev": "cross-env NODE_PATH=src nodemon --watch src/ src/index.js",
+    "start": "cross-env NODE_PATH=src node src"
   },
   "description": "No one: <br>\r Me: Abandon Express!\r ![Abandon Ship!](https://media.giphy.com/media/3o6ZtihIv0pJqdp3H2/giphy.gif)",
   "repository": "git+https://github.com/startergate/Learn-Koa.git",
@@ -15,8 +15,10 @@
   },
   "homepage": "https://github.com/startergate/Learn-Koa#readme",
   "dependencies": {
+    "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "mongoose": "^5.6.5"
   }
