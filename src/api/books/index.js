@@ -8,5 +8,6 @@ router.post('/', booksCtrl.create);
 router.delete('/', booksCtrl.delete);
 router.put('/', booksCtrl.replace);
 router.patch('/', booksCtrl.update);
+router.get('/:id', booksCtrl.get);
 
 module.exports = router;
